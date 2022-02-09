@@ -1,10 +1,12 @@
-import './App.css';
-import WarningSignComponent from './components/WarningSignComponent'
+import "./App.css";
+import BadgeComponent from "./components/BadgeComponent";
+import WarningSignComponent from "./components/WarningSignComponent";
 
 function App() {
   return (
     <div className="App">
-      <WarningSignComponent branding='Alert' colorAlert='red'/>
+      <WarningSignComponent />,
+      <BadgeComponent />
     </div>
   );
 }
