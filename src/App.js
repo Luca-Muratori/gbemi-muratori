@@ -1,14 +1,14 @@
 import "./App.css";
 import BadgeComponent from "./components/BadgeComponent";
+import BookListComponent from "./components/BookListComponent";
 import WarningSignComponent from "./components/WarningSignComponent";
-import SingleBookComponent from "./components/SingleBookComponent";
 
 function App() {
   return (
     <div className="App">
       <WarningSignComponent />,
       <BadgeComponent />
-      <SingleBookComponent />
+      <BookListComponent />
     </div>
   );
 }
