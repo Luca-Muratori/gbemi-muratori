@@ -1,6 +1,6 @@
 import { InputGroup, FormControl, Col, Card, Button } from "react-bootstrap";
 import { useState } from "react";
-import books from '../data/fantasy.json'
+import books from "../data/fantasy.json";
 
 const FilterBookList = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -9,17 +9,20 @@ const FilterBookList = () => {
       <FormControl
         placeholder="Book Name"
         onChange={(e) => {
-            setSearchTerm(e.target.value)
+          setSearchTerm(e.target.value);
         }}
         aria-label="Recipient's username"
         aria-describedby="basic-addon2"
       />
-      
-      {books.filter((value) => {
-          if (searchTerm ==""){
-              return value
-          } else if (value.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-              return value
+
+      {books
+        .filter((value) => {
+          if (searchTerm === "") {
+            return value;
+          } else if (
+            value.title.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return value;
           }
       }).map((value, key) => {
           return(
@@ -35,6 +38,7 @@ const FilterBookList = () => {
               </Col>
       )} )}
     </InputGroup>
-  )}
+  );
+};
 
-export default FilterBookList
+export default FilterBookList;
