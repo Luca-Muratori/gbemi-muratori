@@ -5,7 +5,7 @@ import books from '../data/fantasy.json'
 const FilterBookList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <InputGroup className="mb-3">
+    <InputGroup className="mb-3 ">
       <FormControl
         placeholder="Book Name"
         onChange={(e) => {
@@ -23,19 +23,17 @@ const FilterBookList = () => {
           }
       }).map((value, key) => {
           return(
-            
               <Col xs={12} md={4} lg={3} >
-              <Card key={value.asin}>
-                <Card.Img variant="top" src={value.img} />
-                <Card.Body>
-                  <Card.Title>{value.title}</Card.Title>
-                  <Card.Text>{value.price}</Card.Text>
-                  <Button variant="primary">{value.category}</Button>
-                </Card.Body>
-              </Card>
-            </Col>
+                <Card >
+                  <Card.Img key={value.asin} variant="top" src={value.img} />
+                  <Card.Body>
+                    <Card.Title>{value.title}</Card.Title>
+                    <Card.Text>{value.price}</Card.Text>
+                    <Button variant="primary">{value.category}</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
       )} )}
-      <InputGroup.Text id="basic-addon2"></InputGroup.Text>
     </InputGroup>
   )}
 

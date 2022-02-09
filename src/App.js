@@ -7,10 +7,10 @@ import FilterBookList from './components/FilterBookList'
 function App() {
   return (
     <div className="App">
-      <WarningSignComponent />,
-      <BadgeComponent />,
+      <WarningSignComponent branding='ALERT!'/>
+      <BadgeComponent bgSecondary='blue' />
       {/* <BookListComponent />, */}
-      <FilterBookList />,
+      <FilterBookList />
     </div>
   );
 }

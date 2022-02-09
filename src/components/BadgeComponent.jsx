@@ -1,10 +1,10 @@
 import { Badge } from "react-bootstrap";
 
-const BadgeComponent = () => {
+const BadgeComponent = (prop) => {
   return (
-    <h6>
-      Example heading <Badge bg="secondary">New</Badge>
-    </h6>
+    <div>
+        <Badge style={{ backgroundColor: prop.bgSecondary }} >Badge</Badge>
+    </div>
   );
 };
 
